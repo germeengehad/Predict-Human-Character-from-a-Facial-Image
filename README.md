@@ -1,3 +1,6 @@
 # Predict Human Character from a Facial Image : Project Overview
-   ![credit card Image]()
- This project aims to predict whether a person's character is savory or unsavory based on their images using deep learning techniques, specifically a Convolutional Neural Network (CNN) model. 
+   ![credit card Image](https://github.com/germeengehad/Predict-Human-Character-from-a-Facial-Image/blob/main/dataset-cover.jpg)
+- This project aims to predict whether a person's character is savory or unsavory based on their images using deep learning techniques, specifically a Convolutional Neural Network (CNN) model.
+- All data in this dataset was gathered from PUBLICLY accessible web sites or databases .This dataset consists of 2 classes, savory and unsavory. The unsavory class is populate with i facial mages of convicted felons. The savory class is populated with facial images of "ordinary" people. Granted some "ordinary" people may be convicted felon but I expect the percentage is very low.
+-Initially, I planned to import the dataset from Kaggle. I then applied data augmentation and preprocessing techniques. After building and training a CNN model, I tested it by predicting the character (savory or unsavory) of two individuals using images. Note that only the training and validation datasets were used for model development. The model was tested with images sourced from the web, which I uploaded to this repository.
+  
