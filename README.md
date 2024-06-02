@@ -36,6 +36,6 @@ The second dense layer has 256 neurons with ReLU activation, followed by batch n
   - Compilation: The model is compiled using the Adam optimizer, binary cross-entropy loss function, and accuracy as the performance metric.
 
 # Model Performance
--    ![Image]()
+-    ![Image](https://github.com/germeengehad/Predict-Human-Character-from-a-Facial-Image/blob/main/download%20(1).png)
 
   
