@@ -9,8 +9,14 @@ This directory contains 11 facial images. 10 of the images are of Dr Fauci. The 
 This directory is used to demonstrate the predictor function. Specifically with parameter averaged=False the predictor function will produce and print out a class prediction and probability for EACH image. If averaged=True, the function averages the probabilities for each image and predicts the majority class for the images including the averaged probability. This function with averaged=True if you are using a trained model to make a prediction on an individual person. Rather than basing the prediction on a single image of the person it is far more accurate to include several images of the person and use the average class prediction and probability
 
 #  Data Augmentation And Data Preprossing
+- Data augmentation and preprocessing enhance the robustness and performance of the CNN model.
+- Training images undergo random rotations, shearing, and zooming to create variations.
+- Images are rescaled, horizontally and vertically shifted, and filled with a constant value if needed.
+- Brightness adjustments and horizontal flips further diversify the dataset.
+- Training images are resized to 64x64 pixels and processed in batches.
+- Validation images are simply rescaled and resized to 64x64 pixels for consistency.
+- This approach helps the model generalize better by training on varied augmented images and validating on properly scaled images.
 
-- The data augmentation and preprocessing steps in this project involve several techniques to enhance the robustness and performance of the CNN model. For the training dataset, images are randomly rotated, sheared, and zoomed to create variations. They are also rescaled to normalize pixel values, shifted horizontally and vertically, and filled with a constant value where necessary. Additionally, brightness adjustments and horizontal flips are applied to further diversify the dataset. The training images are resized to 64x64 pixels and processed in batches. For the validation dataset, images are simply rescaled to normalize pixel values and resized to 64x64 pixels, ensuring that the evaluation data is consistent with the training data format. This approach helps the model generalize better by training on a varied set of augmented images and validating on properly scaled images.
 
 # Model Building
 - The model described is a Convolutional Neural Network (CNN) designed for binary classification, predicting whether an image corresponds to a savory or unsavory character. The input images are resized to 64x64 pixels with three color channels (RGB).
@@ -27,8 +33,8 @@ This is followed by another 2x2 max pooling layer, batch normalization, and 20% 
   - Dense Layers:
 The first dense layer has 512 neurons with ReLU activation, followed by batch normalization and a 20% dropout.
 The second dense layer has 256 neurons with ReLU activation, followed by batch normalization and a 20% dropout.
- - Output Layer: A single neuron with sigmoid activation for binary classification.
- - Compilation: The model is compiled using the Adam optimizer, binary cross-entropy loss function, and accuracy as the performance metric.
+  - Output Layer: A single neuron with sigmoid activation for binary classification.
+  - Compilation: The model is compiled using the Adam optimizer, binary cross-entropy loss function, and accuracy as the performance metric.
 
 # Model Performance
 -    ![Image]()
